@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 7" width="21" height="7">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff;stroke: #f57000 } 
+	</style>
+	<g id="Группа 2">
+		<path id="Фигура 2 копия" class="shp0" d="M0.01 2.89L15.56 2.89C14.81 1.75 14.43 1.01 14.4 0C16.1 1.74 18.31 2.65 20.99 3.5C18.31 4.32 16.2 5.31 14.4 7C14.51 5.91 14.82 5.24 15.58 4.03L0.01 4.03L0.01 2.89Z" />
+	</g>
+</svg>
