@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-// Grab scroll to X
-=======
 'use strict';
  
 toX('.scroll');
->>>>>>> cb0781b552b26d2fa3e82a5a1bd68f992cde5a35
 
 function toX (scroll) {
     const _scroll = document.querySelectorAll(scroll);
@@ -35,12 +31,6 @@ _scroll.forEach((item)=> {
 })
 }
 
-<<<<<<< HEAD
-toX('.scroll');
-
-//Range
-
-=======
 const INTERVAL = 500, MAX_VALUE = 10;
 let counter = 0, timer = null;
 
@@ -56,4 +46,3 @@ const event = () => {
 
 console.log('Begin');
 timer = setInterval(event, INTERVAL);
->>>>>>> cb0781b552b26d2fa3e82a5a1bd68f992cde5a35

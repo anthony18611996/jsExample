@@ -52,9 +52,6 @@ scroll-view {
   border: 1px solid #e8e8e8;
 }
 
-<<<<<<< HEAD
-//Grab scroll to X end
-=======
 /*POLARIS START*/
 .swiper-container {
   width: 100%;
@@ -103,7 +100,7 @@ scroll-view {
 }
 .swiper__desc {
   margin-bottom: 82px;
-  @media screen and (576px) {
+  @media screen and (max-width: 576px) {
     margin-bottom: 40px;
   }
   p {
@@ -375,4 +372,3 @@ body {
   }
 }
 /*POLARIS CATALOG END*/
->>>>>>> cb0781b552b26d2fa3e82a5a1bd68f992cde5a35
