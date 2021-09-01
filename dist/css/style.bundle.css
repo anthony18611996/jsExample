@@ -424,6 +424,9 @@ scroll-view {
   scroll-padding: 0px 1.25rem;
   scrollbar-width: none;
 }
+.scroll.active {
+  cursor: grab;
+}
 .scroll::-webkit-scrollbar {
   display: none;
 }

@@ -1,3 +1,5 @@
+// Grab scroll to X
+
 function toX (scroll) {
     const _scroll = document.querySelectorAll(scroll);
     let scrollX;
@@ -7,11 +9,13 @@ function toX (scroll) {
 _scroll.forEach((item)=> {
     item.addEventListener("mouseup", (event) => {
         isWork = false;
+        item.classList.remove('active');
         scrollLeft = item.scrollLeft;
     });
     item.addEventListener("mousedown", (event) => {
         isWork = true;
         event.preventDefault();
+        item.classList.add('active');
         scrollX = event.clientX - item.offsetLeft;
         scrollLeft = item.scrollLeft;
     });
@@ -26,3 +30,6 @@ _scroll.forEach((item)=> {
 }
 
 toX('.scroll');
+
+//Range
+

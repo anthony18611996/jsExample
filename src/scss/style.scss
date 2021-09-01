@@ -5,6 +5,8 @@ body {
   background-color: #ebebeb;
 }
 
+//Grab scroll to X start
+
 scroll-view {
 	width: 100%;
 	height: auto;
@@ -27,7 +29,9 @@ scroll-view {
   scroll-snap-type: x mandatory;
   scroll-padding: 0px 1.25rem;
   scrollbar-width: none;
-
+  &.active {
+    cursor: grab;
+  }
   &::-webkit-scrollbar {
     display: none;
   }
@@ -45,3 +49,5 @@ scroll-view {
   align-items: center;
   justify-content: center;
 }
+
+//Grab scroll to X end

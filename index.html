@@ -14,36 +14,57 @@
     <title>EXAMPLE</title>
   </head>
   <body>
-    <div id="app">
-      <scroll-view>
-        <div class="scroll">
-          <div class="block">1</div>
-          <div class="block">2</div>
-          <div class="block">3</div>
-          <div class="block">4</div>
-          <div class="block">5</div>
-          <div class="block">6</div>
-          <div class="block">7</div>
-          <div class="block">8</div>
-          <div class="block">9</div>
-        </div>
-      </scroll-view>
-    </div>
-    <div id="app">
-      <scroll-view>
-        <div class="scroll">
-          <div class="block">1</div>
-          <div class="block">2</div>
-          <div class="block">3</div>
-          <div class="block">4</div>
-          <div class="block">5</div>
-          <div class="block">6</div>
-          <div class="block">7</div>
-          <div class="block">8</div>
-          <div class="block">9</div>
-        </div>
-      </scroll-view>
-    </div>
+    <section id="scroll">
+      <div id="app">
+        <scroll-view>
+          <div class="scroll">
+            <div class="block">1</div>
+            <div class="block">2</div>
+            <div class="block">3</div>
+            <div class="block">4</div>
+            <div class="block">5</div>
+            <div class="block">6</div>
+            <div class="block">7</div>
+            <div class="block">8</div>
+            <div class="block">9</div>
+          </div>
+        </scroll-view>
+      </div>
+    </section>
+
+    <section id="range">
+      <div id="app">
+        <form action="" method="post">
+          <div class="range__wrapper">
+            <div class="range__input">
+              <div class="range__line">
+                <div class="range__dot">
+                  <div class="range__dot-value">150 Р</div>
+                </div>
+                <div class="range__dot">
+                  <div class="range__dot-value">500 Р</div>
+                </div>
+                <div class="range__dot">
+                  <div class="range__dot-value">1000 Р</div>
+                </div>
+                <div class="range__dot">
+                  <div class="range__dot-value">1500 Р</div>
+                </div>
+                <div class="range__trigger"></div>
+              </div>
+            </div>
+            <div class="range__donate">
+              <div class="range__input-wrap">
+                <input type="text" name="price" id="" value="150 Р" required>
+              </div>
+              <div class="range__input-wrap">
+                <button type="submit">Разовое пожертвование</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <script src="./dist/bundle.js" charset="utf-8"></script>
   </body>
 </html>
