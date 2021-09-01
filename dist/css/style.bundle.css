@@ -419,7 +419,6 @@ scroll-view {
   height: auto;
   padding: 1rem 0;
   margin: 2.5rem 0;
-  cursor: default;
   overflow: scroll hidden;
   scroll-snap-type: x mandatory;
   scroll-padding: 0px 1.25rem;
@@ -440,6 +439,8 @@ scroll-view {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: grabbing;
+  border: 1px solid #e8e8e8;
 }
 
 /*POLARIS START*/
@@ -451,18 +452,30 @@ scroll-view {
 .swiper-slide {
   height: 700px;
   display: flex;
-  background-position: right;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 140px;
+  padding-top: 131px;
+}
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .swiper-slide {
+    background-position: 68%;
+  }
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
 }
 
 .swiper__title {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 .swiper__title span {
   font-size: 60px;
@@ -471,15 +484,43 @@ scroll-view {
   font-weight: 700;
   line-height: 60px;
 }
+@media screen and (max-width: 768px) {
+  .swiper__title span {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .swiper__title span {
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
 
 .swiper__desc {
-  margin-bottom: 70px;
+  margin-bottom: 82px;
+}
+@media screen and (576px) {
+  .swiper__desc {
+    margin-bottom: 40px;
+  }
 }
 .swiper__desc p {
   font-size: 18px;
   letter-spacing: 0px;
   color: #ffffff;
   font-weight: 400;
+  line-height: 23px;
+}
+@media screen and (max-width: 576px) {
+  .swiper__desc p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiper__desc p br {
+    display: none;
+  }
 }
 
 a:hover {
@@ -521,6 +562,11 @@ a:hover {
   padding: 20px 32.7px;
   margin-left: 110px;
 }
+@media screen and (max-width: 576px) {
+  .btn__new.orange {
+    margin-left: 0px;
+  }
+}
 .btn__new.orange:hover {
   background-color: #ffffff;
 }
@@ -544,6 +590,15 @@ a:hover {
   font-family: "Ubuntu", sans-serif;
 }
 
+@media screen and (max-width: 576px) {
+  .excList {
+    overflow: hidden;
+  }
+}
+.excList__logo {
+  padding-top: 9px;
+  margin-bottom: 7px;
+}
 .excList__icon {
   background-color: #ffffff;
   box-shadow: 0 0 6.5px rgba(0, 1, 1, 0.11);
@@ -553,25 +608,66 @@ a:hover {
   justify-content: center;
   width: 82px;
   height: 82px;
+  padding: 20px;
+  margin-right: 15px;
+}
+@media screen and (max-width: 576px) {
+  .excList__icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+.excList__desc {
+  padding-top: 10px;
+}
+.excList__desc p {
+  line-height: 15px;
 }
 .excList .col {
   display: flex;
   align-items: center;
+  padding: 11px 0 15px 0;
+}
+@media screen and (max-width: 576px) {
+  .excList .col {
+    flex-basis: auto;
+    padding: 11px 15px 15px 15px;
+  }
 }
 .excList .col:first-child {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   background-color: #f57000;
-  min-width: 360px;
+  min-width: 375px;
   width: 100%;
   height: 100%;
   background-size: cover;
+  padding-left: 15px;
+}
+@media screen and (max-width: 992px) {
+  .excList .col:first-child {
+    min-width: 460px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .excList .col:first-child {
+    min-width: 370px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .excList .col:first-child {
+    min-width: unset;
+  }
+}
+.excList .col:first-child .excList__desc {
+  padding-top: 0;
 }
 .excList .col:first-child p {
   font-size: 14px;
   color: #ffffff;
   font-weight: 700;
+  line-height: 17px;
 }
 .excList .col:first-child:before {
   content: "";
@@ -583,21 +679,46 @@ a:hover {
   background-color: #f57000;
   position: absolute;
 }
+@media screen and (max-width: 576px) {
+  .excList .col:first-child:before {
+    display: none;
+  }
+}
 .excList .col:first-child:after {
   content: "";
   position: absolute;
-  top: 60px;
+  top: 80px;
   right: 0px;
   height: 100%;
-  width: 100px;
+  width: 125px;
   display: block;
   background-color: #ffffff;
-  transform: skewY(130deg);
+  transform: skewY(128deg);
+}
+@media screen and (max-width: 576px) {
+  .excList .col:first-child:after {
+    display: none;
+  }
+}
+.excList .col:nth-child(2) {
+  margin-left: -100px;
+  margin-right: 35px;
+}
+@media screen and (max-width: 768px) {
+  .excList .col:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .excList .col:nth-child(2) {
+    margin-left: unset;
+  }
 }
 .excList .col p {
   font-size: 14px;
   color: #000000;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 body {
@@ -605,3 +726,69 @@ body {
 }
 
 /*POLARIS END*/
+/*POLARIS CATALOG START*/
+.catNav__row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.catNav__item {
+  display: flex;
+}
+.catNav__item-card {
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.catNav__item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: opacity(0.4);
+}
+.catNav__item-image img {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.catNav__item-head {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+.catNav__item-head a {
+  color: #464646;
+  transition: 0.5s;
+}
+.catNav__item-head a:hover {
+  color: #f57000;
+}
+.catNav__item-body {
+  position: relative;
+  z-index: 1;
+}
+.catNav__item-body nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.catNav__item-body nav ul li {
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+.catNav__item-body nav ul li a {
+  color: #464646;
+  font-size: 14px;
+  transition: 0.5s;
+}
+.catNav__item-body nav ul li a:hover {
+  color: #f57000;
+}
+
+/*POLARIS CATALOG END*/
