@@ -1,0 +1,9 @@
+1. Программирование - это решение задач с помощью вычислительной техники.
+2. Императивное программирование - это решение задачи шаг за шагом (алгоритм).
+3. Декларативное программирование - получение результата сразу (например результат функции).
+4. let count = NaN; console.log({ count }, typeof count); //number
+5. const emptyObject = null; console.log({ emptyObject }), typeof emptyObject); //object
+6. console.log(parseFloat('5mm')); //5
+7. console.log(parseFloat('(5)')); // NaN
+8. console.log(parseFloat('[5]')); // NaN
+9. Ещё один тип данных bigint //очень большое число (например 2 ** 53 - 1)
